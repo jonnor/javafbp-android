@@ -1,0 +1,10 @@
+
+getButton(android/FindViewById) OUT -> VIEW click(android/ClickListener)
+'id.talk_button' -> NAME buttonId(android/GetResource) OUT -> ID getButton
+'Hello World' -> TITLE notify(android/ShowNotification)
+'Powered by JavaFBP & Flowhub' -> TEXT notify
+'drawable.ic_launcher'-> NAME iconId(android/GetResource) OUT -> ICON notify
+click OUT -> FIRE notify
+
+# '1' -> ID notify
+
