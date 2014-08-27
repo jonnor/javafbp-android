@@ -6,8 +6,14 @@
     "click": {
       "component": "android/ClickListener"
     },
+    "buttonId": {
+      "component": "android/GetResource"
+    },
     "notify": {
       "component": "android/ShowNotification"
+    },
+    "iconId": {
+      "component": "android/GetResource"
     }
   },
   "connections": [
@@ -22,6 +28,23 @@
       }
     },
     {
+      "data": "id.talk_button",
+      "tgt": {
+        "process": "buttonId",
+        "port": "name"
+      }
+    },
+    {
+      "src": {
+        "process": "buttonId",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "getButton",
+        "port": "id"
+      }
+    },
+    {
       "data": "Hello World",
       "tgt": {
         "process": "notify",
@@ -33,6 +56,23 @@
       "tgt": {
         "process": "notify",
         "port": "text"
+      }
+    },
+    {
+      "data": "drawable.ic_launcher",
+      "tgt": {
+        "process": "iconId",
+        "port": "name"
+      }
+    },
+    {
+      "src": {
+        "process": "iconId",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "notify",
+        "port": "icon"
       }
     }
   ]

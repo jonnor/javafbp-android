@@ -7,7 +7,8 @@
                 "components": {
                     "ShowNotification": "ShowNotification.java",
                     "FindViewById": "FindViewById.java",
-                    "ClickListener": "ClickListener.java"
+                    "ClickListener": "ClickListener.java",
+                    "GetResource": "GetResource.java"
                 }
             },
             "core": {

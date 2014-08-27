@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import com.jpmorrsn.fbp.engine.*;
 import com.jpmorrsn.fbp.engine.Runtime;
 
+import org.javafbp.android.examples.helloworld.R;
+import org.javafbp.android.examples.helloworld.R.drawable;
+
 public class HelloWorldActivity extends Activity {
 
     @Override
@@ -39,14 +42,19 @@ public class HelloWorldActivity extends Activity {
             def.loadFromJson(AssetUtils.readAsset(getBaseContext(), "showNotification.json"));
             final String button = "getButton";
             def.addInitial(button, "activity", this);
-            def.addInitial(button, "id", R.id.talk_button); // TEMP: use GetResource
+            // def.addInitial(button, "id", R.id.talk_button);
             final String notify = "notify";
             def.addInitial(notify, "context", this);
             def.addInitial(notify, "target", targetIntent);
-            def.addInitial(notify, "icon", R.drawable.ic_launcher); // TEMP: use GetResourcehn
+            // def.addInitial(notify, "icon", R.drawable.ic_launcher);
             // TEMP: network should be long running and fire triggered by click
             def.addInitial(notify, "id", 1); // FIXME: should be optional
             def.addInitial(notify, "fire", true);
+
+            // FIXME: use a Split + exported inports to avoid passing Context/this many times
+            def.addInitial("buttonId", "context", this);
+            def.addInitial("iconId", "context", this);
+
             Runtime.RuntimeNetwork net = new Runtime.RuntimeNetwork(lib, def);
             net.go();
         } catch (Exception e) {
