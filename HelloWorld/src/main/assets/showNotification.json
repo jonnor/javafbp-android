@@ -74,6 +74,16 @@
         "process": "notify",
         "port": "icon"
       }
+    },
+    {
+      "src": {
+        "process": "click",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "notify",
+        "port": "fire"
+      }
     }
   ]
 }

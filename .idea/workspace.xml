@@ -15,9 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b229bf3-b131-48fd-8847-4f85f310aff9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/GetResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ComponentUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java" afterPath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java" afterPath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/HelloWorldActivity.java" afterPath="$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/HelloWorldActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloWorld/src/main/assets/fbp.json" afterPath="$PROJECT_DIR$/HelloWorld/src/main/assets/fbp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java" afterPath="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloWorld/src/main/assets/showNotification.json" afterPath="$PROJECT_DIR$/HelloWorld/src/main/assets/showNotification.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,12 +44,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShowNotification.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ShowNotification.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1395">
-              <caret line="80" column="0" selection-start-line="25" selection-start-column="4" selection-end-line="80" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.45169714" vertical-offset="742" max-vertical-offset="1500">
+              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+              <folding>
+                <element signature="e#2345#2739#0" expanded="true" />
+                <element signature="e#2720#2721#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +70,8 @@
       <file leaf-file-name="FindViewById.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1125">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="69" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1050">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,10 +79,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetResource.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Object.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///opt/android-sdk/sources/android-19/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5736" max-vertical-offset="6180">
+              <caret line="440" column="29" selection-start-line="440" selection-start-column="29" selection-end-line="440" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thread.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///opt/android-sdk/sources/android-19/java/lang/Thread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11443" max-vertical-offset="18090">
+              <caret line="840" column="0" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetResource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/GetResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33236152" vertical-offset="741" max-vertical-offset="1230">
+            <state vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="1230">
               <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,32 +111,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fbp.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelloWorld/src/main/assets/fbp.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClickListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="900">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1020">
+              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+              <folding>
+                <element signature="e#922#1618#0" expanded="true" />
+                <element signature="e#1607#1608#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelloWorld/build.gradle">
+      <file leaf-file-name="ComponentUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ComponentUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="660">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,10 +139,12 @@
       <file leaf-file-name="HelloWorldActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/HelloWorldActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1065">
-              <caret line="53" column="93" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+            <state vertical-scroll-proportion="-7.5555553" vertical-offset="996" max-vertical-offset="1335">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,19 +155,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="435">
               <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_hello_world.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelloWorld/src/main/res/layout/activity_hello_world.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="360">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -1316,12 +1325,13 @@
         <option value="$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/AssetUtils.java" />
         <option value="$PROJECT_DIR$/HelloWorld/src/main/res/layout/activity_hello_world.xml" />
         <option value="$PROJECT_DIR$/HelloWorld/build.gradle" />
-        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java" />
-        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java" />
-        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java" />
         <option value="$PROJECT_DIR$/HelloWorld/src/main/assets/fbp.json" />
         <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/GetResource.java" />
         <option value="$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/HelloWorldActivity.java" />
+        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ComponentUtils.java" />
+        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java" />
+        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java" />
+        <option value="$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java" />
       </list>
     </option>
   </component>
@@ -1804,11 +1814,12 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42319277" sideWeight="0.8511327" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36295182" sideWeight="0.81634307" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42319277" sideWeight="0.14886731" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36295182" sideWeight="0.18365696" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45331326" sideWeight="0.32686085" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51957834" sideWeight="0.8511327" order="7" side_tool="false" content_ui="tabs" />
@@ -1825,7 +1836,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1855,42 +1865,28 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/GetResource.java</url>
-          <line>57</line>
+          <url>file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java</url>
+          <line>53</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HelloWorld/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="641" max-vertical-offset="1125">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="900">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorld/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="660">
@@ -1905,6 +1901,8 @@
           <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1960,7 +1958,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1770">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#2345#2739#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1986,6 +1987,8 @@
           <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2041,7 +2044,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1770">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#2345#2739#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2074,6 +2080,8 @@
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2105,7 +2113,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1770">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#2345#2739#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2138,6 +2149,8 @@
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2219,40 +2232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloWorld/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="660">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="855">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1395">
-          <caret line="80" column="0" selection-start-line="25" selection-start-column="4" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1125">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorld/src/main/assets/fbp.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
@@ -2261,22 +2240,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HelloWorld/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="660">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/android-sdk/sources/android-19/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11443" max-vertical-offset="18090">
+          <caret line="840" column="0" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorld/src/main/java/org/javafbp/android/examples/helloworld/HelloWorldActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1065">
-          <caret line="53" column="93" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+        <state vertical-scroll-proportion="-7.5555553" vertical-offset="996" max-vertical-offset="1335">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ComponentUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///opt/android-sdk/sources/android-19/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5814" max-vertical-offset="6180">
+          <caret line="440" column="29" selection-start-line="440" selection-start-column="29" selection-end-line="440" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/GetResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33236152" vertical-offset="741" max-vertical-offset="1230">
+        <state vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1230">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1020">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="e#922#1618#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/FindViewById.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1050">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/src/main/java/org/javafbp/android/components/ShowNotification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45169714" vertical-offset="742" max-vertical-offset="1500">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+          <folding>
+            <element signature="e#2345#2739#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
           </folding>
         </state>
       </provider>

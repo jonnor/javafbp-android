@@ -46,25 +46,20 @@ public class FindViewById extends Component {
                 final Integer viewId = (Integer)p.getContent();
                 drop(p);
                 final Component self = this;
-                Handler mainHandler = new Handler(Looper.getMainLooper());
                 Runnable myRunnable = new Runnable() {
                     @Override
                     public void run() {
                         View view = activity.findViewById(viewId);
-                        if (!outputPort.isConnected()) {
-                            outputPort.send(create(view));
+                        if (outputPort.isConnected()) {
+                             outputPort.send(create(view));
                         }
                     }
                 };
-                mainHandler.post(myRunnable);
                 try {
-                    synchronized (myRunnable) {
-                        myRunnable.wait(1000); // Make sure we don't terminate
-                    }
+                    ComponentUtils.runInMainThreadWaiting(myRunnable);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         }
     }

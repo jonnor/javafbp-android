@@ -26,18 +26,27 @@ public class ClickListener extends Component {
 
     @Override
     protected void execute() {
-        final Packet p = viewPort.receive();
-        if (p != null) {
-            final View newView = (View)p.getContent();
-            drop(p);
-            Handler mainHandler = new Handler(Looper.getMainLooper());
-            Runnable myRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    // Reset old click handler
+        // FIXME: add a stop port
+        while (true) {
+            Packet p = viewPort.receive();
+            if (p != null) {
+                drop(p);
+                changeView((View)p.getContent());
+            }
+        }
+    }
+
+    private void changeView(final View newView) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                // Reset old click handler
+                if (view != null) {
                     view.setOnClickListener(null);
-                    // Set new
-                    view = newView;
+                }
+                // Attach new handler
+                view = newView;
+                if (view != null) {
                     view.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                             if (outputPort.isConnected()) {
@@ -46,8 +55,12 @@ public class ClickListener extends Component {
                         }
                     });
                 }
-            };
-            mainHandler.post(myRunnable);
+            }
+        };
+        try {
+            ComponentUtils.runInMainThreadWaiting(runnable);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

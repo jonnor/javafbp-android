@@ -41,10 +41,13 @@ public class ShowNotification extends Component {
         for (String name : portNames) {
             InputPort port = inputPorts.get(name);
             final Packet packet = port.receive();
-            Object o = packet.getContent();
-            drop(packet);
-            if (o != null && name != "FIRE") {
+            if (packet == null) {
+                continue;
+            }
+            if (name != "FIRE") {
+                Object o = packet.getContent();
                 lastValue.put(name, o);
+                drop(packet);
             } else if (name == "FIRE") {
                 // Fire notification
                 final Context context = (Context)lastValue.get("CONTEXT");
@@ -65,6 +68,7 @@ public class ShowNotification extends Component {
                     }
                 };
                 mainHandler.post(myRunnable);
+                drop(packet);
             } else {
 
             }

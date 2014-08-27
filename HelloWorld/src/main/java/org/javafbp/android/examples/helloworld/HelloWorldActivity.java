@@ -15,17 +15,28 @@ import org.javafbp.android.examples.helloworld.R.drawable;
 
 public class HelloWorldActivity extends Activity {
 
+    Thread thread = null;
+
+    public class NetworkRunnable implements Runnable {
+        private Runtime.RuntimeNetwork mNetwork;
+
+        NetworkRunnable(Runtime.RuntimeNetwork net) {
+            mNetwork = net;
+        }
+        public void run() {
+            try {
+                mNetwork.go();
+            } catch (Exception e) {
+                // FIXME: give exception out as onError callback
+                e.printStackTrace();
+            }
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello_world);
-
-        String url = "http://github.com/jpaulm/javafbp";
-        Intent t = new Intent(this, HelloWorldActivity.class);
-        if (url != null && !url.isEmpty()) {
-            t = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        }
-        final Intent targetIntent = t;
 
         Runtime.ComponentLibrary lib = null;
         try {
@@ -37,29 +48,36 @@ public class HelloWorldActivity extends Activity {
             e.printStackTrace();
         }
 
+        // Create intent. TODO: create component(s) for this
+        String url = "http://github.com/jpaulm/javafbp";
+        Intent t = new Intent(this, HelloWorldActivity.class);
+        if (url != null && !url.isEmpty()) {
+            t = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        }
+        final Intent targetIntent = t;
+
         Runtime.Definition def = new Runtime.Definition();
         try {
             def.loadFromJson(AssetUtils.readAsset(getBaseContext(), "showNotification.json"));
             final String button = "getButton";
             def.addInitial(button, "activity", this);
-            // def.addInitial(button, "id", R.id.talk_button);
             final String notify = "notify";
             def.addInitial(notify, "context", this);
             def.addInitial(notify, "target", targetIntent);
-            // def.addInitial(notify, "icon", R.drawable.ic_launcher);
-            // TEMP: network should be long running and fire triggered by click
             def.addInitial(notify, "id", 1); // FIXME: should be optional
-            def.addInitial(notify, "fire", true);
-
             // FIXME: use a Split + exported inports to avoid passing Context/this many times
             def.addInitial("buttonId", "context", this);
             def.addInitial("iconId", "context", this);
-
+            // TEMP: network should be long running and fire triggered by click
+            //def.addInitial(notify, "fire", true);
             Runtime.RuntimeNetwork net = new Runtime.RuntimeNetwork(lib, def);
-            net.go();
+            NetworkRunnable runnable = new NetworkRunnable(net);
+            thread = new Thread(runnable);
+            thread.start();
         } catch (Exception e) {
             System.err.print("Network execution failed");
             e.printStackTrace();
         }
+        System.err.print("OnCreate FINISHED");
     }
 }
