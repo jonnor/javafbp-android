@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+version = '0.0.1'
+
+description = 'Android components & examples for JavaFBP'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'javafbp-android',
+        'Implementation-Version': version
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile files('thirdparty/lib/javafbp-2.9.jar')
+}

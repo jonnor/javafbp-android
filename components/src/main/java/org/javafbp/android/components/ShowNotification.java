@@ -1,4 +1,7 @@
-package jon.myapplication2;
+package org.javafbp.android.components;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -74,11 +77,11 @@ public class ShowNotification extends Component {
                 Runnable myRunnable = new Runnable() {
                     @Override
                     public void run() {
-                    sendNotification(context, id, title, text, icon, target);
-                    // Send confirmation
-                    if (outputPort.isConnected()) {
-                        outputPort.send(create(true));
-                    }
+                        sendNotification(context, id, title, text, icon, target);
+                        // Send confirmation
+                        if (outputPort.isConnected()) {
+                            outputPort.send(create(true));
+                        }
                     }
                 };
                 mainHandler.post(myRunnable);

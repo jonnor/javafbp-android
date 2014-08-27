@@ -1,1 +1,6 @@
 *~
+.idea/copyright
+.gradle/
+build/
+settings.gradle
+local.properties
