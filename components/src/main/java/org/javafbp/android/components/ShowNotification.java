@@ -1,28 +1,13 @@
 package org.javafbp.android.components;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Handler;
-import android.os.Looper;
+import android.app.*;
+import android.content.*;
+import android.os.*;
 import android.support.v4.app.NotificationCompat;
 
-import com.jpmorrsn.fbp.engine.Component;
-import com.jpmorrsn.fbp.engine.InputPort;
-import com.jpmorrsn.fbp.engine.OutPort;
-import com.jpmorrsn.fbp.engine.InPort;
-import com.jpmorrsn.fbp.engine.InPorts;
-import com.jpmorrsn.fbp.engine.OutputPort;
-import com.jpmorrsn.fbp.engine.Packet;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.jpmorrsn.fbp.engine.*;
 
 // Put the message into a notification and post it.
 
@@ -30,23 +15,18 @@ import java.util.Map;
 @InPorts({
         @InPort(value="CONTEXT", type=Context.class),
         @InPort(value="TITLE", type=String.class),
-        @InPort(value="TEXT", type=String.class),
-        @InPort(value="TARGET", type=Intent.class),
-        @InPort(value="ID", type=Integer.class),
-        @InPort(value="ICON", type=Integer.class),
+        @InPort(value="TEXT", type=String.class),  // TODO: make optional
+        @InPort(value="TARGET", type=Intent.class), // TODO: make optional
+        @InPort(value="ID", type=Integer.class), // TODO: make optional
+        @InPort(value="ICON", type=Integer.class), // TODO: make optional
         @InPort(value="FIRE", type=Object.class)
 })
 public class ShowNotification extends Component {
-
-    static final String copyright = "Copyright 2014. TheGrid. All rights reserved.";
 
     private OutputPort outputPort;
     private Map<String, InputPort> inputPorts = new HashMap<String, InputPort>();
     private String[] portNames = {"CONTEXT", "TITLE", "TEXT", "TARGET", "ID", "ICON", "FIRE"};
     private Map<String, Object> lastValue = new HashMap<String, Object>();
-
-    public ShowNotification() {
-    }
 
     @Override
     protected void openPorts() {
@@ -60,7 +40,7 @@ public class ShowNotification extends Component {
     protected void execute() {
         for (String name : portNames) {
             InputPort port = inputPorts.get(name);
-            Packet packet = port.receive();
+            final Packet packet = port.receive();
             Object o = packet.getContent();
             drop(packet);
             if (o != null && name != "FIRE") {
@@ -94,15 +74,20 @@ public class ShowNotification extends Component {
     // Not threadsafe!
     private static void sendNotification(Context context, int notificationId,
                                          String title, String text, int iconId, Intent target) {
+        if (context == null || title == null || text == null || target == null) {
+            System.err.print("NULL data in SendNotification");
+            return;
+        }
 
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, target, 0);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
                 .setSmallIcon(iconId)
                 .setContentTitle(title)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(text))
                 .setContentText(text);
 
+        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, target, 0);
         mBuilder.setContentIntent(contentIntent);
+
         Notification notification = mBuilder.build();
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         NotificationManager nm = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);

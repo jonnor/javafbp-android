@@ -1,0 +1,39 @@
+{
+  "processes": {
+    "getButton": {
+      "component": "android/FindViewById"
+    },
+    "click": {
+      "component": "android/ClickListener"
+    },
+    "notify": {
+      "component": "android/ShowNotification"
+    }
+  },
+  "connections": [
+    {
+      "src": {
+        "process": "getButton",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "click",
+        "port": "view"
+      }
+    },
+    {
+      "data": "Hello World",
+      "tgt": {
+        "process": "notify",
+        "port": "title"
+      }
+    },
+    {
+      "data": "Powered by JavaFBP & Flowhub",
+      "tgt": {
+        "process": "notify",
+        "port": "text"
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="javafbp-2.9">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/components/libs/javafbp-2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/javafbp-android/components/unspecified/libs/javafbp-2.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

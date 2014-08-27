@@ -1,10 +1,14 @@
 package org.javafbp.android.examples.helloworld;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import org.javafbp.android.components.ShowNotification;
+
+import com.jpmorrsn.fbp.engine.*;
+import com.jpmorrsn.fbp.engine.Runtime;
 
 public class HelloWorldActivity extends Activity {
 
@@ -12,25 +16,42 @@ public class HelloWorldActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello_world);
-    }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.hello_world, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        String url = "http://github.com/jpaulm/javafbp";
+        Intent t = new Intent(this, HelloWorldActivity.class);
+        if (url != null && !url.isEmpty()) {
+            t = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         }
-        return super.onOptionsItemSelected(item);
+        final Intent targetIntent = t;
+
+        Runtime.ComponentLibrary lib = null;
+        try {
+            String fbpJsonContent = AssetUtils.readAsset(getBaseContext(), "fbp.json");
+            lib = new Runtime.ComponentLibrary();
+            lib.loadFromJson(fbpJsonContent);
+        } catch (Exception e) {
+            System.err.print("Failed to load component library");
+            e.printStackTrace();
+        }
+
+        Runtime.Definition def = new Runtime.Definition();
+        try {
+            def.loadFromJson(AssetUtils.readAsset(getBaseContext(), "showNotification.json"));
+            final String button = "getButton";
+            def.addInitial(button, "activity", this);
+            def.addInitial(button, "id", R.id.talk_button); // TEMP: use GetResource
+            final String notify = "notify";
+            def.addInitial(notify, "context", this);
+            def.addInitial(notify, "target", targetIntent);
+            def.addInitial(notify, "icon", R.drawable.ic_launcher); // TEMP: use GetResourcehn
+            // TEMP: network should be long running and fire triggered by click
+            def.addInitial(notify, "id", 1); // FIXME: should be optional
+            def.addInitial(notify, "fire", true);
+            Runtime.RuntimeNetwork net = new Runtime.RuntimeNetwork(lib, def);
+            net.go();
+        } catch (Exception e) {
+            System.err.print("Network execution failed");
+            e.printStackTrace();
+        }
     }
 }
