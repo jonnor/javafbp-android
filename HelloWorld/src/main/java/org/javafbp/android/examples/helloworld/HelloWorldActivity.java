@@ -49,7 +49,7 @@ public class HelloWorldActivity extends Activity {
         }
 
         // Create intent. TODO: create component(s) for this
-        String url = "http://github.com/jpaulm/javafbp";
+        String url = "http://github.com/jonnor/javafbp-android";
         Intent t = new Intent(this, HelloWorldActivity.class);
         if (url != null && !url.isEmpty()) {
             t = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

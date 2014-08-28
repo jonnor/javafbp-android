@@ -7,7 +7,23 @@ This enables you to develop Android code using the [Flowhub](http://flowhub.io) 
 
 Status
 -------
-Proof-of-concept
+Proof-of-concept.
+* A couple of useful components exists
+* Can embed and run simple graphs in Android app
+* Can connect runtime to NoFlo UI to build graphs visually
+
+Hello World example
+--------------------
+
+``git clone https://github.com/jonnor/javafbp-android.git``
+
+* Open Android Studio
+* Import the javafbp-android project
+* Run the HelloWorld app
+
+Connecting to NoFlo UI
+------------------------
+TODO: documenting
 
 License
 --------
